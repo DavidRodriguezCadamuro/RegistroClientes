@@ -1,0 +1,121 @@
+﻿@model IEnumerable<FicticiaSAWeb.Models.Clientes>
+    
+    @{
+        ViewBag.Title = "Index";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+    <h2>Listado de Clientes Registrados</h2>
+    <br>
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.nombreCompleto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.identificacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.edad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.estado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.maneja)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.lentes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.otraEnfermedad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.descripcionOtraEnfermedad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Generos.genero)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nombreCompleto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.identificacion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.edad)
+                </td>
+                <td>
+                    @if (item.estado)
+                    {
+                        @Html.Encode("Activo")
+                    }
+                    @if (!item.estado)
+                    {
+                        @Html.Encode("Inactivo")
+                    }
+                </td>
+                <td>
+                    @if (item.maneja == true)
+                    {
+                        @Html.Encode("Si")
+                    }
+                    @if (item.maneja == null)
+                    {
+                        @Html.Encode("No")
+                    }
+                    @if (item.maneja == false)
+                    {
+                        @Html.Encode("No")
+                    }
+                </td>
+                <td>
+                    @if (item.lentes == true)
+                    {
+                        @Html.Encode("Si")
+                    }
+                    @if (item.lentes == null)
+                    {
+                        @Html.Encode("No")
+                    }
+                    @if (item.lentes == false)
+                    {
+                        @Html.Encode("No")
+                    }
+                </td>
+                <td>
+                    @if (item.otraEnfermedad == true)
+                    {
+                        @Html.Encode("Si")
+                    }
+                    @if (item.otraEnfermedad == null)
+                    {
+                        @Html.Encode("No")
+                    }
+                    @if (item.otraEnfermedad == false)
+                    {
+                        @Html.Encode("No")
+                    }
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.descripcionOtraEnfermedad)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Generos.genero)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { id = item.idCliente }) |
+                    @Html.ActionLink("Ver", "Details", new { id = item.idCliente }) |
+                    @Html.ActionLink("Borrar", "Delete", new { id = item.idCliente })
+                </td>
+            </tr>
+        }
+
+    </table>

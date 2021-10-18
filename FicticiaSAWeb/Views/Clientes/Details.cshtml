@@ -1,0 +1,91 @@
+﻿@model FicticiaSAWeb.Models.Clientes
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Clientes</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombreCompleto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombreCompleto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.identificacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.identificacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.edad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.edad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.maneja)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.maneja)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lentes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lentes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.otraEnfermedad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.otraEnfermedad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descripcionOtraEnfermedad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcionOtraEnfermedad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Generos.genero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Generos.genero)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar este Cliente", "Edit", new { id = Model.idCliente }) |
+    @Html.ActionLink("Volver al listado", "Index")
+</p>

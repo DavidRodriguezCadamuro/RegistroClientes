@@ -1,0 +1,22 @@
+﻿@model FicticiaSAWeb.Models.Usuario
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Bienvenido! Inicie Sesion</h2>
+<br><br>
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(u => u.usuario, "Usuario")
+    @Html.TextBoxFor(u => u.usuario, new { type = "usuario" })
+    <br>
+    <br>
+    @Html.LabelFor(u => u.contrasenia, "Contraseña")
+    @Html.TextBoxFor(u => u.contrasenia, new { type = "password"})
+    <br>
+    <br>
+    <button>Iniciar Sesión</button>
+}
+<br>
+<h4>@TempData["mensaje"]</h4>

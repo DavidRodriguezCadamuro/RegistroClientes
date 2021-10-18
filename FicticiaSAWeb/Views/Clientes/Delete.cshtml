@@ -1,0 +1,96 @@
+﻿@model FicticiaSAWeb.Models.Clientes
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Eliminando</h2>
+
+<h3>¿Estas seguro de eliminar el siguiente Cliente?</h3>
+<div>    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombreCompleto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombreCompleto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.identificacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.identificacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.edad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.edad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.maneja)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.maneja)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lentes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lentes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.otraEnfermedad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.otraEnfermedad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descripcionOtraEnfermedad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcionOtraEnfermedad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Generos.genero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Generos.genero)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            @Html.ActionLink("Volver al listado", "Index")
+        </div>
+    }
+</div>

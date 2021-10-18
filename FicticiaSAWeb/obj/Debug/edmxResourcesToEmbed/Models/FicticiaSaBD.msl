@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FicticiaSADatabaseModelStoreContainer" CdmEntityContainer="FicticiaSADatabaseEntities1">
+    <EntitySetMapping Name="Clientes">
+      <EntityTypeMapping TypeName="FicticiaSADatabaseModel.Clientes">
+        <MappingFragment StoreEntitySet="Clientes">
+          <ScalarProperty Name="idCliente" ColumnName="idCliente" />
+          <ScalarProperty Name="nombreCompleto" ColumnName="nombreCompleto" />
+          <ScalarProperty Name="identificacion" ColumnName="identificacion" />
+          <ScalarProperty Name="edad" ColumnName="edad" />
+          <ScalarProperty Name="idGenero" ColumnName="idGenero" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="maneja" ColumnName="maneja" />
+          <ScalarProperty Name="lentes" ColumnName="lentes" />
+          <ScalarProperty Name="otraEnfermedad" ColumnName="otraEnfermedad" />
+          <ScalarProperty Name="descripcionOtraEnfermedad" ColumnName="descripcionOtraEnfermedad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Generos">
+      <EntityTypeMapping TypeName="FicticiaSADatabaseModel.Generos">
+        <MappingFragment StoreEntitySet="Generos">
+          <ScalarProperty Name="idGenero" ColumnName="idGenero" />
+          <ScalarProperty Name="genero" ColumnName="genero" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
